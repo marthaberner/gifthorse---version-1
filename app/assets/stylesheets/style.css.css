@@ -397,9 +397,10 @@ header h2 {
     margin-left: -520px;
     max-width: 495px;
     position: relative;
-    top: 314px;
+    top: 416px;
     width: 50%;
     z-index: 4;
+    background: red;
 }
 
 .intro {
