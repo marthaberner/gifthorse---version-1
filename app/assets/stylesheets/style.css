@@ -391,16 +391,17 @@ header h2 {
     white-space: nowrap;
 }
 .preamble {
-    clear: left;
+    /*clear: left;*/
     float: left;
     left: 50%;
     margin-left: -520px;
     max-width: 495px;
     position: relative;
-    top: 298px;
+    top: 314px;
     width: 50%;
     z-index: 4;
 }
+
 .intro {
     background: #edf6ff;
     background: -moz-linear-gradient(top, #ffffff 0%, #edf6ff 100%);
@@ -458,7 +459,7 @@ header h2 {
     float: left;
     height: 412px;
     left: 60%;
-    margin-top: -310px;
+    margin-top: -110px;
     max-width: 495px;
     min-width: 412px;
     position: relative;
