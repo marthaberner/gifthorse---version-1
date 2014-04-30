@@ -1,0 +1,19 @@
+<h1>Add Person</h1>
+
+<form action="/gifts" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+
+  <p>
+    <label for="gift_nickname" class="form-label">Gift Nickname</label>
+    <input name="gift[nickname]" id="gift_nickname">
+  </p>
+
+  <p>
+    <label for="gift_gift_url" class="form-label">Gift Url</label>
+    <input name="gift[gift_url]" id="gift_url">
+  </p>
+
+  <p>
+    <input type="submit" value="Add Gift!" class="form-button">
+  </p>
+</form>
