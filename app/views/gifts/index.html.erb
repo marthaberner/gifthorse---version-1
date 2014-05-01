@@ -1,5 +1,23 @@
+  <h3>Add An Item to Your List</h3>
 
-<h1>Welcome to GiftHorse!</h1>
+  <p>Keep track of stuff you like, stuff you love... it's your list. Put whatever you want on it. </p>
 
-<h4><a href="/gifts/new">Add a Gift!</a></h4>
+  <form action="/gifts" method="post">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
+
+    <p>
+      <label for="gift_nickname" class="form-label">Item Nickname</label>
+      <input name="gift[nickname]" id="gift_nickname" placeholder="Sweet Shoes!" autofocus="autofocus">
+
+    </p>
+
+    <p>
+      <label for="gift_gift_url" class="form-label">Item Url</label>
+      <input name="gift[gift_url]" id="gift_url" placeholder="http://www.example.com">
+    </p>
+
+    <p>
+      <input type="submit" value="Add Item!" class="form-button">
+    </p>
+  </form>
 

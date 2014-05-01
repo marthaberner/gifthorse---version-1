@@ -1,57 +1,3 @@
-/* css Zen Garden submission 215 - 'A Robot Named Jimmy', by meltmedia, http://meltmedia.com  */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-/* All associated graphics copyright 2013, meltmedia  */
-
-
-/* IMPORTANT */
-/* This design is not a template. You may not reproduce it elsewhere without the 
-   designer's written permission. However, feel free to study the CSS and use 
-   techniques you learn from it elsewhere. */
-
-
-/* 
- * A submission from meltmedia for the CSS Zen Garden's 10th Anniversary
- * 
- * Design by @guitrasher
- * Development by @jimmyking
- *
- * http://meltmedia.com
- *
- *                                                               
- *                 +N@@@@@@?~           +@@@@@@N+~               
- *                @@@@@@@@@@@D~       $@@@@@@@@@@@Z              
- *             ~$@@@@@@@@@@@@@@     ~N@@@@@@@@@@@@@@~            
- *             7@@@@@@@@@@@@@@@N    8@@@@@@@@@@@@@@@D            
- *            ~@@@@@@@@@@@@@@@@@~   @@@@@@@@@@@@@@@@@~           
- *             @@@@@@@@@@@@@@@@@~  ~@@@@@@@@@@@@@@@@@~           
- *             8@@@@@@@@@@@@@@@@   ~@@@@@@@@@@@@@@@@@            
- *             ?@@@@@@@@@@@@@@@7    $@@@@@@@@@@@@@@@I            
- *              @@@@@@@@@@@@@@D      @@@@@@@@@@@@@@8             
- *              @@@@@@@@@@@@@+      ~@@@@@@@@@@@@@               
- *             @@@@@@@@@@@7         @@@@@@@@@@@I                 
- *       ~$@@@@@@@@@@@         $@@@@@@@@@@@~       ~@@@@@@ ~     
- *      @@@@@@@@@@@@@        @@@@@@@@@@@@@~      +@@@@@@@@@@I    
- *    7@@@@@@@@@@@@@@      O@@@@@@@@@@@@@@~    ~@@@@@@@@@@@@@@   
- *   +@@@@@@@@@@@@@@@~    O@@@@@@@@@@@@@@@~    @@@@@@@@@@@@@@@@  
- *  ~@@@@@@@@@@@@@@@@8    @@@@@@@@@@@@@@@@8~   @@@@@@@@@@@@@@@@N 
- *  ~@@@@@@@@@@@@@@@@@~   @@@@@@@@@@@@@@@@@   $@@@@@@@@@@@@@@@@@ 
- *  ~@@@@@@@@@@@@@@@@@~  ~@@@@@@@@@@@@@@@@@~  ?@@@@@@@@@@@@@@@@@ 
- *  ~8@@@@@@@@@@@@@@@?    N@@@@@@@@@@@@@@@+   ~@@@@@@@@@@@@@@@@+ 
- *   ~@@@@@@@@@@@@@@@~    ~@@@@@@@@@@@@@@N      @@@@@@@@@@@@@@8  
- *    ~N@@@@@@@@@@@?       ~D@@@@@@@@@@@+        @@@@@@@@@@@@+~  
- *     ~ $@@@@@@@I            $@@@@@@D            ~Z@@@@@@N~     
- *                                                               
- *                      _ _                      _ _             
- *                     | | |                    | (_)            
- *       _ __ ___   ___| | |_ _ __ ___   ___  __| |_  __ _       
- *      | '_ ` _ \ / _ \ | __| '_ ` _ \ / _ \/ _` | |/ _` |      
- *      | | | | | |  __/ | |_| | | | | |  __/ (_| | | (_| |      
- *      |_| |_| |_|\___|_|\__|_| |_| |_|\___|\__,_|_|\__,_|      
- *                                                               
- *
- * See the original LESS files at https://github.com/jking90/zen-garden
- *
- */
 
 @import url('http://fonts.googleapis.com/css?family=Arvo:700|Open+Sans:400italic,400');
 
@@ -400,7 +346,6 @@ header h2 {
     top: 416px;
     width: 50%;
     z-index: 4;
-    background: red;
 }
 
 .intro {
@@ -459,7 +404,7 @@ header h2 {
     display: block;
     float: left;
     height: 412px;
-    left: 60%;
+    left: 20%;
     margin-top: -110px;
     max-width: 495px;
     min-width: 412px;
@@ -869,17 +814,46 @@ form {
 
 }
 
-.gift_form {
-    margin-top: 30px;
+.attributes > dt {
+    clear: left;
+    display: block;
+    float: left;
+    padding-left: 177px;
+    width: 100px;
+    padding-bottom: 1em;
+    font-weight: bold;
 }
 
-/*table.gifts {*/
+.attributes dt {
+    font-family: 'Adelle W01 Bold', 'Arvo', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    font-size: 15px;
+    /*font-weight: 400;*/
+    line-height: 1em;
+    color: #dd3b2a;
+}
 
-    /*margin-left: 100px;*/
-    /*border: 1px solid red;*/
+.attributes dd {
+    font-family: 'Adelle W01 Bold', 'Arvo', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    font-size: 15px;
+    /*font-weight: l;*/
+    line-height: 1em;
+    color: #0066CC;
+}
+
+/*.attributes > dt:after {*/
+    /*content: ':';*/
 /*}*/
 
-/*table td {*/
-    /*height: 10px;*/
-    /*padding*/
-/*}*/
+.attributes > dd {
+    float: left;
+}
+
+.form-label {
+    display: inline-block;
+    width: 100px;
+    font-family: 'Adelle W01 Bold', 'Arvo', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    font-size: 15px;
+    /*font-weight: 400;*/
+    line-height: 1em;
+    color: #dd3b2a;
+}

@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>The GiftHorse</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -44,66 +44,57 @@
       <h1>GiftHorse</h1>
     </header>
 
-      <div class="summary" id="zen-summary" role="article">
-        <!--<p>&nbsp;</p>-->
-        <!--<p>&nbsp;</p>-->
-        <!--<p>&nbsp;</p>-->
-        <!--<p>&nbsp;</p>-->
-        <!--<p>&nbsp;</p>-->
-        <!--<p>&nbsp;</p>-->
-      </div>
+    <div class="summary" id="zen-summary" role="article">
+      <!--<p>&nbsp;</p>-->
+      <!--<p>&nbsp;</p>-->
+      <!--<p>&nbsp;</p>-->
+      <!--<p>&nbsp;</p>-->
+      <!--<p>&nbsp;</p>-->
+      <!--<p>&nbsp;</p>-->
+    </div>
 
     <div class="preamble" id="zen-preamble" role="article">
       <h3>So, What is This About?</h3>
-      <p>It's about giving.  Through connectivity and simplicity, GiftHorse connects the dots and bridges the gap between the idea of giving and the act of making it all happen
+
+      <p>It's about giving. Through connectivity and simplicity, GiftHorse connects the dots and bridges the gap between
+        the idea of giving and the act of making it all happen
         , allowing users to easily send gifts to friends and loved ones.
       </p>
+
       <p>For every gift we send for you, GiftHorse donates to Child's Dream, a non-profit
-        dedicated to empowering marginalised children and youth in Myanmar, Laos, Thailand and Cambodia.  </p></div>
+        dedicated to empowering marginalised children and youth in Myanmar, Laos, Thailand and Cambodia. </p></div>
   </section>
 
   <div class="main supporting" id="zen-supporting" role="main">
     <div class="explanation" id="zen-explanation" role="article">
-      <h3>Add An Item to Your List</h3>
-      <p>Keep track of stuff you like, stuff you love ...it's your list. Put whatever you want on it. </p>
-      <form action="/gifts" method="post">
-      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-
-        <label for="gift_nickname" class="form-label">Gift Nickname</label>
-        <input name="gift[nickname]" id="gift_nickname">
-      </p>
-
-      <p>
-        <label for="gift_gift_url" class="form-label">Gift Url</label>
-        <input name="gift[gift_url]" id="gift_url">
-      </p>
-
-      <p>
-        <input type="submit" value="Add Item!" class="form-button">
-      </p>
-    </form></div>
+      <%= yield %>
+    </div>
 
     <div class="participation" id="zen-participation" role="article">
       <h3>My GiftHorse</h3>
-      <p><% @gifts.each do |gift| %></p>
-      <p>Nickname: <%= gift[:nickname] %><br>
-        Gift Url: <%= gift[:gift_url] %></p>
-        <% end %>
+      <% @gifts.each do |gift| %>
+        <dl class="attributes">
+          <dt>Nickname:</dt>
+          <dd><%= gift[:nickname] %></dd>
+          <dt>Gift Url:</dt>
+          <dd><%= gift[:gift_url] %></dd>
+        </dl>
+      <% end %>
 
     </div>
 
     <!--<div class="benefits" id="zen-benefits" role="article">-->
-      <!--<h3>Benefits</h3>-->
-      <!--<p>Why participate? For recognition, inspiration, and a resource we can all refer to showing people how amazing <abbr title="Cascading Style Sheets">CSS</abbr> really can be. This site serves as equal parts inspiration for those working on the web today, learning tool for those who will be tomorrow, and gallery of future techniques we can all look forward to.</p>-->
+    <!--<h3>Benefits</h3>-->
+    <!--<p>Why participate? For recognition, inspiration, and a resource we can all refer to showing people how amazing <abbr title="Cascading Style Sheets">CSS</abbr> really can be. This site serves as equal parts inspiration for those working on the web today, learning tool for those who will be tomorrow, and gallery of future techniques we can all look forward to.</p>-->
     <!--</div>-->
 
     <!--<div class="requirements" id="zen-requirements" role="article">-->
-      <!--<h3>Requirements</h3>-->
-      <!--<p>Where possible, we would like to see mostly <abbr title="Cascading Style Sheets, levels 1 and 2">CSS 1 &amp; 2</abbr> usage. <abbr title="Cascading Style Sheets, levels 3 and 4">CSS 3 &amp; 4</abbr> should be limited to widely-supported elements only, or strong fallbacks should be provided. The CSS Zen Garden is about functional, practical <abbr title="Cascading Style Sheets">CSS</abbr> and not the latest bleeding-edge tricks viewable by 2% of the browsing public. The only real requirement we have is that your <abbr title="Cascading Style Sheets">CSS</abbr> validates.</p>-->
-      <!--<p>Luckily, designing this way shows how well various browsers have implemented <abbr title="Cascading Style Sheets">CSS</abbr> by now. When sticking to the guidelines you should see fairly consistent results across most modern browsers. Due to the sheer number of user agents on the web these days &#8212; especially when you factor in mobile &#8212; pixel-perfect layouts may not be possible across every platform. That&#8217;s okay, but do test in as many as you can. Your design should work in at least IE9+ and the latest Chrome, Firefox, iOS and Android browsers (run by over 90% of the population).</p>-->
-      <!--<p>We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes to your work. We&#8217;re well past the point of needing another garden-related design.</p>-->
-      <!--<p>This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see <a href="http://www.mezzoblue.com/zengarden/submit/guidelines/">submission guidelines</a>), but we ask you release your <abbr title="Cascading Style Sheets">CSS</abbr> under a Creative Commons license identical to the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Zen Garden's license information.">one on this site</a> so that others may learn from your work.</p>-->
-      <!--<p role="contentinfo">By <a href="http://www.mezzoblue.com/">Dave Shea</a>. Bandwidth graciously donated by <a href="http://www.mediatemple.net/">mediatemple</a>. Now available: <a href="http://www.amazon.com/exec/obidos/ASIN/0321303474/mezzoblue-20/">Zen Garden, the book</a>.</p>-->
+    <!--<h3>Requirements</h3>-->
+    <!--<p>Where possible, we would like to see mostly <abbr title="Cascading Style Sheets, levels 1 and 2">CSS 1 &amp; 2</abbr> usage. <abbr title="Cascading Style Sheets, levels 3 and 4">CSS 3 &amp; 4</abbr> should be limited to widely-supported elements only, or strong fallbacks should be provided. The CSS Zen Garden is about functional, practical <abbr title="Cascading Style Sheets">CSS</abbr> and not the latest bleeding-edge tricks viewable by 2% of the browsing public. The only real requirement we have is that your <abbr title="Cascading Style Sheets">CSS</abbr> validates.</p>-->
+    <!--<p>Luckily, designing this way shows how well various browsers have implemented <abbr title="Cascading Style Sheets">CSS</abbr> by now. When sticking to the guidelines you should see fairly consistent results across most modern browsers. Due to the sheer number of user agents on the web these days &#8212; especially when you factor in mobile &#8212; pixel-perfect layouts may not be possible across every platform. That&#8217;s okay, but do test in as many as you can. Your design should work in at least IE9+ and the latest Chrome, Firefox, iOS and Android browsers (run by over 90% of the population).</p>-->
+    <!--<p>We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes to your work. We&#8217;re well past the point of needing another garden-related design.</p>-->
+    <!--<p>This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see <a href="http://www.mezzoblue.com/zengarden/submit/guidelines/">submission guidelines</a>), but we ask you release your <abbr title="Cascading Style Sheets">CSS</abbr> under a Creative Commons license identical to the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Zen Garden's license information.">one on this site</a> so that others may learn from your work.</p>-->
+    <!--<p role="contentinfo">By <a href="http://www.mezzoblue.com/">Dave Shea</a>. Bandwidth graciously donated by <a href="http://www.mediatemple.net/">mediatemple</a>. Now available: <a href="http://www.amazon.com/exec/obidos/ASIN/0321303474/mezzoblue-20/">Zen Garden, the book</a>.</p>-->
     <!--</div>-->
 
     <footer>
@@ -121,69 +112,69 @@
     <div class="wrapper">
 
       <!--<div class="design-selection" id="design-selection">-->
-        <!--<h3 class="select">Select a Design:</h3>-->
-        <!--<nav role="navigation">-->
-          <!--<ul>-->
-            <!--<li>-->
-              <!--<a href="/220/" class="design-name">Garments</a> by						<a href="http://danielmall.com/" class="designer-name">Dan Mall</a>-->
-            <!--</li>					<li>-->
-            <!--<a href="/219/" class="design-name">Steel</a> by						<a href="http://steffen-knoeller.de" class="designer-name">Steffen Knoeller</a>-->
-          <!--</li>					<li>-->
-            <!--<a href="/218/" class="design-name">Apothecary</a> by						<a href="http://trentwalton.com" class="designer-name">Trent Walton</a>-->
-          <!--</li>					<li>-->
-            <!--<a href="/217/" class="design-name">Screen Filler</a> by						<a href="http://elliotjaystocks.com/" class="designer-name">Elliot Jay Stocks</a>-->
-          <!--</li>					<li>-->
-            <!--<a href="/216/" class="design-name">Fountain Kiss</a> by						<a href="http://jeremycarlson.com." class="designer-name">Jeremy Carlson</a>-->
-          <!--</li>					<li>-->
-            <!--<a href="/215/" class="design-name">A Robot Named Jimmy</a> by						<a href="http://meltmedia.com/" class="designer-name">meltmedia</a>-->
-          <!--</li>					<li>-->
-            <!--<a href="/214/" class="design-name">Verde Moderna</a> by						<a href="http://www.mezzoblue.com/" class="designer-name">Dave Shea</a>-->
-          <!--</li>					<li>-->
-            <!--<a href="/213/" class="design-name">Under the Sea!</a> by						<a href="http://www.ericstoltz.com/" class="designer-name">Eric Stoltz</a>-->
-          <!--</li>					</ul>-->
-        <!--</nav>-->
+      <!--<h3 class="select">Select a Design:</h3>-->
+      <!--<nav role="navigation">-->
+      <!--<ul>-->
+      <!--<li>-->
+      <!--<a href="/220/" class="design-name">Garments</a> by						<a href="http://danielmall.com/" class="designer-name">Dan Mall</a>-->
+      <!--</li>					<li>-->
+      <!--<a href="/219/" class="design-name">Steel</a> by						<a href="http://steffen-knoeller.de" class="designer-name">Steffen Knoeller</a>-->
+      <!--</li>					<li>-->
+      <!--<a href="/218/" class="design-name">Apothecary</a> by						<a href="http://trentwalton.com" class="designer-name">Trent Walton</a>-->
+      <!--</li>					<li>-->
+      <!--<a href="/217/" class="design-name">Screen Filler</a> by						<a href="http://elliotjaystocks.com/" class="designer-name">Elliot Jay Stocks</a>-->
+      <!--</li>					<li>-->
+      <!--<a href="/216/" class="design-name">Fountain Kiss</a> by						<a href="http://jeremycarlson.com." class="designer-name">Jeremy Carlson</a>-->
+      <!--</li>					<li>-->
+      <!--<a href="/215/" class="design-name">A Robot Named Jimmy</a> by						<a href="http://meltmedia.com/" class="designer-name">meltmedia</a>-->
+      <!--</li>					<li>-->
+      <!--<a href="/214/" class="design-name">Verde Moderna</a> by						<a href="http://www.mezzoblue.com/" class="designer-name">Dave Shea</a>-->
+      <!--</li>					<li>-->
+      <!--<a href="/213/" class="design-name">Under the Sea!</a> by						<a href="http://www.ericstoltz.com/" class="designer-name">Eric Stoltz</a>-->
+      <!--</li>					</ul>-->
+      <!--</nav>-->
       <!--</div>-->
 
       <div class="design-archives" id="design-archives">
         <!--<h3 class="archives">Archives:</h3>-->
         <!--<nav role="navigation">-->
-          <!--<ul>-->
-            <!--<li class="next">-->
-              <!--<a href="/214/page1">-->
-                <!--Next Designs <span class="indicator">&rsaquo;</span>-->
-              <!--</a>-->
-            <!--</li>-->
-            <!--<li class="viewall">-->
-              <!--<a href="http://www.mezzoblue.com/zengarden/alldesigns/" title="View every submission to the Zen Garden.">-->
-                <!--View All Designs							</a>-->
-            <!--</li>-->
-          <!--</ul>-->
+        <!--<ul>-->
+        <!--<li class="next">-->
+        <!--<a href="/214/page1">-->
+        <!--Next Designs <span class="indicator">&rsaquo;</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="viewall">-->
+        <!--<a href="http://www.mezzoblue.com/zengarden/alldesigns/" title="View every submission to the Zen Garden.">-->
+        <!--View All Designs							</a>-->
+        <!--</li>-->
+        <!--</ul>-->
         <!--</nav>-->
-      <!--</div>-->
+        <!--</div>-->
 
-      <!--<div class="zen-resources" id="zen-resources">-->
+        <!--<div class="zen-resources" id="zen-resources">-->
         <!--<h3 class="resources">Resources:</h3>-->
         <!--<ul>-->
-          <!--<li class="view-css">-->
-            <!--<a href="/214/214.css" title="View the source CSS file of the currently-viewed design.">-->
-              <!--View This Design&#8217;s <abbr title="Cascading Style Sheets">CSS</abbr>						</a>-->
-          <!--</li>-->
-          <!--<li class="css-resources">-->
-            <!--<a href="http://www.mezzoblue.com/zengarden/resources/" title="Links to great sites with information on using CSS.">-->
-              <!--<abbr title="Cascading Style Sheets">CSS</abbr> Resources						</a>-->
-          <!--</li>-->
-          <!--<li class="zen-faq">-->
-            <!--<a href="http://www.mezzoblue.com/zengarden/faq/" title="A list of Frequently Asked Questions about the Zen Garden.">-->
-              <!--<abbr title="Frequently Asked Questions">FAQ</abbr>						</a>-->
-          <!--</li>-->
-          <!--<li class="zen-submit">-->
-            <!--<a href="http://www.mezzoblue.com/zengarden/submit/" title="Send in your own CSS file.">-->
-              <!--Submit a Design						</a>-->
-          <!--</li>-->
-          <!--<li class="zen-translations">-->
-            <!--<a href="http://www.mezzoblue.com/zengarden/translations/" title="View translated versions of this page.">-->
-              <!--Translations						</a>-->
-          <!--</li>-->
+        <!--<li class="view-css">-->
+        <!--<a href="/214/214.css" title="View the source CSS file of the currently-viewed design.">-->
+        <!--View This Design&#8217;s <abbr title="Cascading Style Sheets">CSS</abbr>						</a>-->
+        <!--</li>-->
+        <!--<li class="css-resources">-->
+        <!--<a href="http://www.mezzoblue.com/zengarden/resources/" title="Links to great sites with information on using CSS.">-->
+        <!--<abbr title="Cascading Style Sheets">CSS</abbr> Resources						</a>-->
+        <!--</li>-->
+        <!--<li class="zen-faq">-->
+        <!--<a href="http://www.mezzoblue.com/zengarden/faq/" title="A list of Frequently Asked Questions about the Zen Garden.">-->
+        <!--<abbr title="Frequently Asked Questions">FAQ</abbr>						</a>-->
+        <!--</li>-->
+        <!--<li class="zen-submit">-->
+        <!--<a href="http://www.mezzoblue.com/zengarden/submit/" title="Send in your own CSS file.">-->
+        <!--Submit a Design						</a>-->
+        <!--</li>-->
+        <!--<li class="zen-translations">-->
+        <!--<a href="http://www.mezzoblue.com/zengarden/translations/" title="View translated versions of this page.">-->
+        <!--Translations						</a>-->
+        <!--</li>-->
         <!--</ul>-->
       </div>
     </div>
@@ -199,7 +190,11 @@
 	These only remain for historical design compatibility. They might go away one day.
 
 -->
-<div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
-<div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
+<div class="extra1" role="presentation"></div>
+<div class="extra2" role="presentation"></div>
+<div class="extra3" role="presentation"></div>
+<div class="extra4" role="presentation"></div>
+<div class="extra5" role="presentation"></div>
+<div class="extra6" role="presentation"></div>
 
 </body>
