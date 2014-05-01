@@ -1,5 +1,7 @@
 == README
 
+An app to simplify and facilitate gift giving.
+
 Heroku URL
 ===========
 
