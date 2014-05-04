@@ -1,13 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'gifts#index'
+  root 'welcome#index'
 
-  get 'about/about', to: 'about#about'
+  resources :users
 
-  get '/gifts', to: 'gifts#index'
-
-  get '/gifts/new', to: 'gifts#new'
-
-  post '/gifts/', to: 'gifts#create'
-
+  resources :sessions, only: [:create]
 end
