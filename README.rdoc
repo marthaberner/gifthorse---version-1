@@ -11,3 +11,8 @@ GitHub URL
 ===========
 
 https://github.com/marthaberner/gifthorse
+
+Tracker URL
+=============
+
+https://www.pivotaltracker.com/n/projects/1072512
