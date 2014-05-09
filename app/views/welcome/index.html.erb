@@ -44,7 +44,6 @@
 
       <% if @user.errors.present? %>
         <div class="errors">
-          <h1>There was an error</h1>
           <ul class="error-list">
             <% @user.errors.full_messages.each do |message| %>
               <li><%= message %></li>

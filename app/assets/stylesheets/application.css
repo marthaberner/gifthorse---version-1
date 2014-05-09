@@ -118,7 +118,7 @@ p {
     font-weight: bold;
 }
 
-.flash_notice_created {
+.create_notice {
     padding-left: 0px;
     color: red;
     font-weight: bold;
@@ -134,4 +134,8 @@ p {
 
 .form-label {
     padding-left: 10px;
+}
+
+.error-list ul {
+    list-style-type: none;
 }

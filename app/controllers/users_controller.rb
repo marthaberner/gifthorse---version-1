@@ -16,13 +16,13 @@ class UsersController < ApplicationController
     if  @user.save
       redirect_to '/', notice: "Your account has been created.  You may login."
     else
-      render :new
+      render "welcome/index"
     end
   end
 
   private
 
   def allowed_parameters
-    params.require(:user).permit(:username)
+    params.require(:user).permit(:username, :password)
   end
 end
