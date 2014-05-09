@@ -45,11 +45,5 @@ describe SessionsController do
       post :create, username: 'bobthany', password: 'password'
       expect(page).to redirect_to user_path(user)
     end
-
-    it 'set a flash message' do
-      post :create, username: 'bobthany', password: 'password'
-      expect(flash[:info]).to eq 'You are logged in!'
-      expect(flash[:alert]).to_not be
-    end
   end
 end

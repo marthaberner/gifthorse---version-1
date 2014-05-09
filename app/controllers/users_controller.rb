@@ -12,8 +12,9 @@ class UsersController < ApplicationController
     @user = User.new(allowed_parameters)
     hashed_password = BCrypt::Password.create(params[:user][:password])
     @user.password = hashed_password
-    if @user.save
-      redirect_to '/'
+
+    if  @user.save
+      redirect_to '/', notice: "Your account has been created.  You may login."
     else
       render :new
     end

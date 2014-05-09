@@ -22,7 +22,7 @@ header {
     text-align: center;
     top: 0;
     width: 100%;
-    font-weight: 900;
+    font-weight: 700;
     z-index: 1;
 }
 
@@ -41,6 +41,7 @@ h1 {
     Georgia, serif;
     font-size: 91px;
     font-weight: 800;
+    color: #003366;
 }
 h2 {
     color: #dd3b2a;
@@ -68,23 +69,69 @@ a {
 
 p {
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 1.25em;
 }
 
 .container {
     margin: auto;
     width: 100%;
-    padding: 25px;
+    padding-left: 145px;
+    padding-right: 145px;
 
 }
 
 .create_account {
-    width: 50%;
+    float: right;
+    width: 30%;
+    margin-right: 320px;
 
+}
+
+.login {
+    float: left;
+    width: 30%;
+    margin-left: 40px;
 }
 
 .what_is {
     display: block;
-    width: 40%;
+    width: 70%;
+    padding: 30px;
+
+}
+
+.what_is p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.flash_notice_login {
+    color: red;
+    font-weight: bold;
+    padding-left: 110px;
+}
+
+.flash_info {
+    color: red;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.flash_notice_created {
+    padding-left: 0px;
+    color: red;
+    font-weight: bold;
+}
+
+.create {
+    padding-left: 200px;
+}
+
+.sign_in {
+    padding-left: 265px;
+}
+
+.form-label {
+    padding-left: 10px;
 }

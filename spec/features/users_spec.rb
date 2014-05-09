@@ -12,12 +12,12 @@ feature 'User Accounts' do
 
     visit '/'
 
-    within '.sign_in' do
+    within '.login' do
       fill_in 'Username', with: 'martha'
       fill_in 'Password', with: 'me'
-      click_on 'Sign In'
+      click_on 'Login'
     end
 
-    expect(page).to have_content 'Welcome, martha'
+    expect(page).to have_content 'Hello'
   end
 end

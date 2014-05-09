@@ -1,40 +1,45 @@
 <div class="container">
-
   <div class="what_is">
     <h3>What is GiftHorse?</h3>
 
     <p>It's about giving. Through connectivity and simplicity, GiftHorse connects the dots and bridges the gap
       between the idea of giving and the act of making it all happen , allowing users to easily send gifts to
       friends and loved ones.</p>
+    <p>By collecting items you like, friends and family members can easily browse items in your list, and the next time
+    a special occasion arrives, giving will be easier than ever.  For you, and for them. </p>
 
     <p>
       For every gift we send for you, GiftHorse donates to Child's Dream, a non-profit dedicated
       to empowering marginalised children and youth in Myanmar, Laos, Thailand and Cambodia.</p>
   </div>
 
-  <div class="sign_in">
-    <h3>Sign in</h3>
+  <div class="login">
+    <h3>Login</h3>
+
     <%= form_tag sessions_path do %>
+
       <p>
-        <%= label_tag :username, 'Username', class: "form-label" %>
+        <%= label_tag :username, "Username", class: "form-label" %>
         <%= text_field_tag :username %>
       </p>
 
       <p>
-        <%= label_tag :password, 'Password', class: "form-label" %>
+        <%= label_tag :password, "Password", class: "form-label" %>
         <%= password_field_tag :password %>
       </p>
 
-      <p>
-        <%= submit_tag "Sign In", class: "form-button" %>
-
+      <p class="sign_in">
+        <%= submit_tag "Login", class: "form-button" %>
       </p>
+      <p class="flash_notice_login"><%= flash[:alert] %></p>
 
     <% end %>
   </div>
 
   <div class="create_account">
+
     <h3>Create An Account</h3>
+
     <%= form_for @user do |f| %>
 
       <% if @user.errors.present? %>
@@ -59,14 +64,19 @@
         <%= f.password_field :password %>
       </p>
 
-      <p>
+      <p class="create">
         <%= f.submit "Create Account", class: "form-button" %>
+      </p>
 
+      <p><% if flash[:notice] %><p>
+        <p class="flash_notice_created"><%= flash[:notice] %></p>
+      <% end %>
       </p>
 
     <% end %>
   </div>
 </div>
+
 
 
 
