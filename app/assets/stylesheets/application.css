@@ -81,17 +81,25 @@ p {
 
 }
 
+.half {
+    margin: 0px;
+    width: 75%;
+    border-top: 3px solid #CC3300;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .create_account {
     float: right;
-    width: 30%;
-    margin-right: 320px;
+    width: 45%;
+    margin-right: 0px;
 
 }
 
 .login {
     float: left;
-    width: 30%;
-    margin-left: 40px;
+    width: 40%;
+    margin-left: 50px;
 }
 
 .what_is {
