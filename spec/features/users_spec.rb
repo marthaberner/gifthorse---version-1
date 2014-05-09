@@ -6,7 +6,7 @@ feature 'User Accounts' do
 
     within '.create_account' do
       fill_in 'Username', with: 'martha'
-      fill_in 'Password', with: 'me'
+      fill_in 'Password', with: 'meee'
       click_on 'Create Account'
     end
 
@@ -14,7 +14,7 @@ feature 'User Accounts' do
 
     within '.login' do
       fill_in 'Username', with: 'martha'
-      fill_in 'Password', with: 'me'
+      fill_in 'Password', with: 'meee'
       click_on 'Login'
     end
 

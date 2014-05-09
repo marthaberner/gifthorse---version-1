@@ -10,7 +10,7 @@ describe UsersController do
 
       user = User.last
 
-      expect(user.password).to eq 'hashedpassword'
+      expect(user.hashed_password).to eq 'hashedpassword'
       expect(BCrypt::Password).to have_received(:create).with('thepassword')
     end
   end

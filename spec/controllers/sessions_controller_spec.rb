@@ -22,8 +22,7 @@ describe SessionsController do
   end
 
   context 'invalid password' do
-    let(:encrypted_password) {BCrypt::Password.create('password')}
-    let!(:user) {User.create!(username: 'bobthany', password: encrypted_password)}
+    let!(:user) {User.create!(username: 'bobthany', password: 'password')}
 
     it 'does not sign in' do
       post :create, username: 'bobthany', password: 'badpassword'
@@ -33,8 +32,7 @@ describe SessionsController do
   end
 
   context 'with a matching username' do
-    let(:encrypted_password) {BCrypt::Password.create('password')}
-    let!(:user) {User.create!(username: 'bobthany', password: encrypted_password)}
+    let!(:user) {User.create!(username: 'bobthany', password: 'password')}
 
     it 'signs them in' do
       post :create, username: 'bobthany', password: 'password'

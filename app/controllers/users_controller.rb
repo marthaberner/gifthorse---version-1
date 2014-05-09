@@ -9,9 +9,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(allowed_parameters)
-    hashed_password = BCrypt::Password.create(params[:user][:password])
-    @user.password = hashed_password
+    #@user = User.new(allowed_parameters)
+    @user = User.new
+    @user.username = params[:user][:username]
+    @user.password = params[:user][:password]
 
     if  @user.save
       redirect_to '/', notice: "Your account has been created.  You may login."
