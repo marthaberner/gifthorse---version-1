@@ -139,3 +139,14 @@ p {
 .error-list ul {
     list-style-type: none;
 }
+
+.field_with_errors {
+    display: inline;
+}
+
+.field_with_errors ul, li {
+    color: red;
+    list-style-type: none;
+
+
+}
