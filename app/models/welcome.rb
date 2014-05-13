@@ -1,4 +1,4 @@
-class Welcome < Application::Base
+class Welcome < ActiveRecord::Base
   validates :username, presence: true
 
 end
