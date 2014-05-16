@@ -1,7 +1,6 @@
 == README
 
-What is GiftHorse?
-==================
+# What is GiftHorse?
 
 An app to simplify and facilitate gift giving.
 
@@ -15,28 +14,24 @@ a special occasion arrives, giving will be easier than ever.
 
 For you, and for them.
 
-Setup
-=====
+## Setup
 
-Fork
-Clone
+* Fork
+* Clone
 
-Get Setup Locally
-=================
+## Get Setup Locally
 
+```
 bundle
-
 rake db:create
 rake db:migrate
 rake spec
+```
 
-Heroku URL
-----------
+## Heroku URL
 
 http://the-gifthorse.herokuapp.com/
 
-
-Tracker URL
------------
+## Tracker URL
 
 https://www.pivotaltracker.com/n/projects/1072512
