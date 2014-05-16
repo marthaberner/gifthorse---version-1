@@ -35,26 +35,71 @@ body {
     font-size: 16px;
     line-height: 1.25em;
 }
+
 h1 {
     font-family: 'Adelle W01 Bold', 'Arvo', Constantia, "Lucida Bright", Lucidabright,
     "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif",
     Georgia, serif;
-    font-size: 91px;
+    font-size: 81px;
     font-weight: 800;
     color: #003366;
+    padding-top: 30px;
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
 }
+
+h1:before {
+    border-top: 3px solid #CC3300;
+    content:"";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 40px; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+h1 span {
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    background: #fff;
+    padding: 0 15px;
+}
+
+h1.double:before {
+    /* this is just to undo the :before styling from above */
+    border-top: none;
+}
+
+h1.double:after {
+    border-bottom: 1px solid blue;
+    -webkit-box-shadow: 0 1px 0 0 red;
+    -moz-box-shadow: 0 1px 0 0 red;
+    box-shadow: 0 1px 0 0 red;
+    content: "";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute;
+    top: 45%; left: 0; right: 0;
+    width: 95%;
+    z-index: -1;
+}
+
 h2 {
     color: #dd3b2a;
-    font-size: 22px;
-    font-style: italic;
-    font-weight: 400;
+    font-family: 'Adelle W01 Bold', 'Arvo', Constantia, "Lucida Bright", Lucidabright,
+    "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif",
+    Georgia, serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.25em;
+    margin: 0.5em 0;
 }
 h3 {
     color: #dd3b2a;
     font-family: 'Adelle W01 Bold', 'Arvo', Constantia, "Lucida Bright", Lucidabright,
     "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif",
     Georgia, serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
     line-height: 1.25em;
     margin: 0.5em 0;
@@ -68,9 +113,13 @@ a {
 }
 
 p {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.25em;
+    display: block;
+    font-size: 1.15em;
+    font-weight: 300;
+    line-height: 1.75em;
+    font-family: 'Open Sans', Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT",
+    "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L",
+    Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .container {
@@ -82,11 +131,10 @@ p {
 }
 
 .half {
-    margin: 0px;
+    margin: 0 0 0 15px;
     width: 75%;
     border-top: 3px solid #CC3300;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 20px;
 }
 
 .create_account {
@@ -104,7 +152,7 @@ p {
 
 .what_is {
     display: block;
-    width: 70%;
+    width: 75%;
     padding: 30px;
 
 }
@@ -132,16 +180,25 @@ p {
     font-weight: bold;
 }
 
-.create {
-    padding-left: 200px;
-}
-
-.sign_in {
-    padding-left: 265px;
-}
 
 .form-label {
-    padding-left: 10px;
+    color: #CC3300;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25em;
+    display: inline-block;
+    margin-left: 5px;
+    width: 100px;
+}
+
+.form-button {
+    margin-left: 265px;
+    font-weight: 500;
+}
+
+.create-button {
+    margin-left: 186px;
+    font-weight: 500;
 }
 
 .error-list ul {
