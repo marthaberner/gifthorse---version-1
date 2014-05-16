@@ -43,5 +43,12 @@ describe SessionsController do
       post :create, username: 'bobthany', password: 'password'
       expect(page).to redirect_to user_path(user)
     end
+
+    it 'signs them out' do
+      delete :destroy, id: user[:id]
+
+      expect(session[:id]).to_not be
+      expect(page).to redirect_to root_path
+    end
   end
 end

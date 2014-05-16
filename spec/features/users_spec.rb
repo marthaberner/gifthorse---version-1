@@ -17,7 +17,12 @@ feature 'User Accounts' do
       fill_in 'Password', with: 'meee'
       click_on 'Login'
     end
-    expect(page).to have_content 'Hello'
+
+    expect(page).to have_content 'Hello, Martha!'
+
+    click_on 'Logout'
+    expect(page).to have_content 'You are logged out'
+
   end
 
   scenario 'Username cannot be blank' do

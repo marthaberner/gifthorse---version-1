@@ -11,10 +11,14 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    session[:id] = nil
+    redirect_to root_path, alert: 'You are logged out'
+  end
+
   private
 
   def decrypted_password(password_to_decrypt)
     BCrypt::Password.new(password_to_decrypt)
   end
-
 end

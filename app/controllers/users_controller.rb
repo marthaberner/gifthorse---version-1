@@ -9,13 +9,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    #@user = User.new(allowed_parameters)
-    @user = User.new
-    @user.username = params[:user][:username]
-    @user.password = params[:user][:password]
+    @user = User.new(allowed_parameters)
 
     if  @user.save
-      redirect_to '/', notice: "Your account has been created.  You may login."
+      redirect_to '/', alert: "Your account has been created.  You may login."
     else
       render "welcome/index"
     end
