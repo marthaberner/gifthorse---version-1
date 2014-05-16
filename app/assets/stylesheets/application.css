@@ -113,10 +113,11 @@ a {
 }
 
 p {
+    color: #333366;
     display: block;
     font-size: 1.15em;
-    font-weight: 300;
-    line-height: 1.75em;
+    font-weight: 500;
+    line-height: 1.5em;
     font-family: 'Open Sans', Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT",
     "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L",
     Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
