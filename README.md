@@ -1,4 +1,3 @@
-== README
 
 # What is GiftHorse?
 
@@ -14,12 +13,11 @@ a special occasion arrives, giving will be easier than ever.
 
 For you, and for them.
 
-## Setup
+
+## Get Setup Locally
 
 * Fork
 * Clone
-
-## Get Setup Locally
 
 ```
 bundle
