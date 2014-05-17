@@ -1,60 +1,57 @@
 require 'spec_helper'
 
-feature 'User Accounts' do
+feature 'User Accounts', js: true do
   scenario 'user can register' do
     visit '/'
 
     within '.create_account' do
-      fill_in 'Username', with: 'martha'
-      fill_in 'Password', with: 'meee'
+      fill_in 'Email', with: 'martha@example.com'
+      fill_in 'Password', with: '12345678'
       click_on 'Create Account'
     end
 
-    visit '/'
+    click_on 'Logout'
+    expect(page).to have_content 'Signed out successfully'
 
     within '.login' do
-      fill_in 'Username', with: 'martha'
-      fill_in 'Password', with: 'meee'
+      fill_in 'Email', with: 'martha@example.com'
+      fill_in 'Password', with: '12345678'
       click_on 'Login'
     end
 
-    expect(page).to have_content 'Hello, Martha!'
-
-    click_on 'Logout'
-    expect(page).to have_content 'You are logged out'
-
+    expect(page).to have_content 'Hello, martha@example.com!'
   end
 
-  scenario 'Username cannot be blank' do
+  scenario 'Email cannot be blank' do
     visit '/'
 
     within '.create_account' do
-      fill_in 'Username', with: ''
-      fill_in 'Password', with: '1234'
+      fill_in 'Email', with: ''
+      fill_in 'Password', with: '12345678'
       click_on 'Create Account'
     end
-    expect(page).to have_content 'Username cannot be blank'
+    expect(page).to have_content 'Email can\'t be blank'
   end
 
   scenario 'Password cannot be blank' do
     visit '/'
 
     within '.create_account' do
-      fill_in 'Username', with: 'Hunter'
+      fill_in 'Email', with: 'Hunter@example.com'
       fill_in 'Password', with: ''
       click_on 'Create Account'
     end
     expect(page).to have_content 'Password can\'t be blank'
   end
 
-  scenario 'Password must be between min 4 characters ' do
+  scenario 'Password must be between min 8 characters ' do
     visit '/'
 
     within '.create_account' do
-      fill_in 'Username', with: 'Hunter'
+      fill_in 'Email', with: 'Hunter@example.com'
       fill_in 'Password', with: '12'
       click_on 'Create Account'
     end
-    expect(page).to have_content 'Password is too short (minimum is 4 characters)'
+    expect(page).to have_content 'Password is too short (minimum is 8 characters)'
   end
 end
