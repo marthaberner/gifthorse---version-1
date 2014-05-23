@@ -16,7 +16,6 @@ gem 'devise', '~> 3.2.4'
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.2'
   gem 'capybara', '~> 2.2.1'
-  gem 'selenium-webdriver'
   gem 'database_cleaner', '~> 1.2.0'
 end
 
