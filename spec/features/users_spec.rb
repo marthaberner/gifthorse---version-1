@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'User Accounts', js: true do
+feature 'User Accounts' do
   scenario 'user can register' do
     visit '/'
 

@@ -7,15 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <h1><span>GiftHorse</span></h1>
+</header>
+
+<main>
+  <div class="alerts">
     <p class="notice"><%= notice %></p>
+
     <p class="alert"><%= alert %></p>
-
-    <header>
-      <h1><span>GiftHorse</span>  </h1>
-    </header>
-
-    <main>
-        <%= yield %>
-    </main>
+  </div>
+  <%= yield %>
+</main>
 </body>
 </html>

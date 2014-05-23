@@ -42,7 +42,7 @@ h1 {
     Georgia, serif;
     font-size: 81px;
     font-weight: 800;
-    color: #003366;
+    color: #00374F;
     padding-top: 30px;
     margin-top: 30px;
     position: relative;
@@ -123,6 +123,7 @@ p {
     Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+
 .container {
     margin: auto;
     width: 100%;
@@ -145,10 +146,30 @@ p {
 
 }
 
+.login-button {
+    margin-left: 140px;
+    font-weight: 500;
+
+}
+
+.login-button-2 {
+    margin-left: 280px;
+    font-weight: 500;
+
+}
+
 .login {
     float: left;
     width: 40%;
     margin-left: 50px;
+}
+
+.remember-me {
+    margin-left: 5px;
+}
+
+.confirmation {
+    width: 177px;
 }
 
 .what_is {
@@ -198,7 +219,12 @@ p {
 }
 
 .create-button {
-    margin-left: 186px;
+    margin-left: 200px;
+    font-weight: 500;
+}
+
+.create-button-2 {
+    margin-left: 160px;
     font-weight: 500;
 }
 
@@ -213,6 +239,36 @@ p {
 .field_with_errors ul, li {
     color: red;
     list-style-type: none;
+}
 
+.devise-links {
+    margin-top: 10px;
+    margin-left: 6px;
+    color: #CC3300;
+}
 
+.devise-links a {
+    color: #CC3300;
+}
+
+.alerts {
+    margin-left: 200px;
+}
+
+.alert {
+    color: red;
+}
+
+#error_explanation h2 {
+    font-size: 20px;
+
+}
+
+#error_explanation ul {
+    margin-left: 80px;
+
+}
+
+.reset-button {
+    margin-left: 205px;
 }
