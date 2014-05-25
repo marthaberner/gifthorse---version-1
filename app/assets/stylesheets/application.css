@@ -14,9 +14,13 @@
  *= require_self
  */
 
+html {
+    margin: 0px;
+}
+
 header {
     display: block;
-    margin: 0 auto;
+    margin: 0px;
     max-width: 1040px;
     position: relative;
     text-align: center;
@@ -34,7 +38,12 @@ body {
     Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.25em;
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('http://marthaberner.com/wp-content/uploads/2014/05/horses.jpg');
 }
+
 
 h1 {
     font-family: 'Adelle W01 Bold', 'Arvo', Constantia, "Lucida Bright", Lucidabright,
@@ -43,8 +52,8 @@ h1 {
     font-size: 81px;
     font-weight: 800;
     color: #00374F;
-    padding-top: 30px;
-    margin-top: 30px;
+    padding-top: 50px;
+    margin-top: 0px;
     position: relative;
     text-align: center;
     z-index: 1;
@@ -55,14 +64,14 @@ h1:before {
     content:"";
     margin: 0 auto; /* this centers the line to the full width specified */
     position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-    top: 40px; left: 0; right: 0; bottom: 0;
-    width: 100%;
+    top: 60px; left: 0; right: 0; bottom: 0;
+    width: 90%;
     z-index: -1;
 }
 
 h1 span {
     /* to hide the lines from behind the text, you have to set the background color the same as the container */
-    background: #fff;
+    background-color: #EDF6FF;
     padding: 0 15px;
 }
 
@@ -92,7 +101,8 @@ h2 {
     font-size: 40px;
     font-weight: 800;
     line-height: 1.25em;
-    margin: 0.5em 0;
+     margin: 0.5em 0;
+    padding: 0px;
 }
 h3 {
     color: #dd3b2a;
@@ -123,26 +133,56 @@ p {
     Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+main {
+    background-color: #EDF6FF;
 
-.container {
-    margin: auto;
-    width: 100%;
-    padding-left: 145px;
-    padding-right: 145px;
 
 }
 
+.page-container {
+    background-color: #EDF6FF;
+    height: 800px;
+}
+
+.container {
+    margin-top: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    padding: 0px;
+    border-top: 4px solid #CCE4FB;
+    border-bottom: 4px solid #CCE4FB;
+
+}
+
+.container-home {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    padding-left: 165px;
+
+}
+
+.notice {
+    color: blue;
+}
+
 .half {
-    margin: 0 0 0 15px;
-    width: 75%;
-    border-top: 3px solid #CC3300;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 20px;
+    border-top: 3px solid #CCE4FB;
 }
 
 .create_account {
     float: right;
     width: 45%;
     margin-right: 0px;
+    margin-top: 0px;
+    border-top: 3px solid #CCE4FB;
+    border-bottom: 3px solid #CCE4FB;
+    background-color: #EDF6FF;
 
 }
 
@@ -159,9 +199,33 @@ p {
 }
 
 .login {
-    float: left;
+    width: 45%;
+    margin-left: 0px;
+}
+
+.create-home {
     width: 40%;
-    margin-left: 50px;
+    margin-top: -192px;
+    margin-left: 580px;
+    }
+
+.forgot-password {
+    width: 45%;
+    padding-left: 0%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.create-with-errors {
+    width: 50%;
+    margin-left: 0px;
+
+}
+
+.login-home {
+    width: 40%;
+    margin-left: 32px;
 }
 
 .remember-me {
@@ -175,7 +239,9 @@ p {
 .what_is {
     display: block;
     width: 75%;
-    padding: 30px;
+    padding-left: 75px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
 }
 
