@@ -4,7 +4,7 @@ feature 'User Accounts' do
   scenario 'user can register' do
     visit '/'
 
-    within '.create_account' do
+    within '.create-home' do
       fill_in 'Email', with: 'martha@example.com'
       fill_in 'Password', with: '12345678'
       click_on 'Create Account'
@@ -13,7 +13,7 @@ feature 'User Accounts' do
     click_on 'Logout'
     expect(page).to have_content 'Signed out successfully'
 
-    within '.login' do
+    within '.login-home' do
       fill_in 'Email', with: 'martha@example.com'
       fill_in 'Password', with: '12345678'
       click_on 'Login'
@@ -25,7 +25,7 @@ feature 'User Accounts' do
   scenario 'Email cannot be blank' do
     visit '/'
 
-    within '.create_account' do
+    within '.create-home' do
       fill_in 'Email', with: ''
       fill_in 'Password', with: '12345678'
       click_on 'Create Account'
@@ -36,7 +36,7 @@ feature 'User Accounts' do
   scenario 'Password cannot be blank' do
     visit '/'
 
-    within '.create_account' do
+    within '.create-home' do
       fill_in 'Email', with: 'Hunter@example.com'
       fill_in 'Password', with: ''
       click_on 'Create Account'
@@ -47,7 +47,7 @@ feature 'User Accounts' do
   scenario 'Password must be between min 8 characters ' do
     visit '/'
 
-    within '.create_account' do
+    within '.create-home' do
       fill_in 'Email', with: 'Hunter@example.com'
       fill_in 'Password', with: '12'
       click_on 'Create Account'
