@@ -213,6 +213,14 @@ p {
     width: 100px;
 }
 
+#user_password {
+    width: 219px;
+}
+
+#user_email {
+    width: 219px;
+}
+
 .form-button {
     margin-left: 265px;
     font-weight: 500;
@@ -223,8 +231,13 @@ p {
     font-weight: 500;
 }
 
-.create-button- too {
+.create-button-too {
     margin-left: 160px;
+    font-weight: 500;
+}
+
+.create-button-errors {
+    margin-left: 200px;
     font-weight: 500;
 }
 
