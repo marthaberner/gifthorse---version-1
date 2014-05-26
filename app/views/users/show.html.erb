@@ -1,4 +1,42 @@
-<div class="container">
-<h3>Hello, <%= @user.email %>!</h3>
-  <p><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
+<div class="user-page-container">
+  <div class="greeting">
+    <h3>Hello, <%= @user.email %>!</h3>
+  </div>
+
+    <div class="list-gifts-container">
+      <h3>Your GiftHorse List</h3>
+
+    </div>
+
+      <div class="add-gifts-container">
+        <h3>Add An Item to Your GiftHorse</h3>
+        <%= form_for @gift do |f| %>
+
+          <% if @gift.errors.present? %>
+            <div class="errors">
+              <h3>There was an error</h3>
+              <ul class="error-list">
+                <%= @gift.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <p>
+            <%= f.label :nickname, class: "form-label" %>
+            <%= f.text_field :nickname %>
+          </p>
+
+          <p>
+            <%= f.label :url, class: "form-label" %>
+            <%= f.url_field :url %>
+          </p>
+
+          <p>
+            <%= f.submit "Add Item", class: "form-button" %>
+          </p>
+        <% end %>
+
+      </div>
 </div>

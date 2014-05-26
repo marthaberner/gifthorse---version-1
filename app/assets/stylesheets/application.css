@@ -109,7 +109,7 @@ h3 {
     font-family: 'Adelle W01 Bold', 'Arvo', Constantia, "Lucida Bright", Lucidabright,
     "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif",
     Georgia, serif;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.25em;
     margin: 0.5em 0;
@@ -154,8 +154,42 @@ main {
     border: 2px solid #CC3300;
     border-radius:25px;
     -moz-border-radius: 15px;
+}
 
+.user-page-container {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    padding: 20px;
+}
 
+.add-gifts-container{
+    width: 50%;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    float: right;
+    margin-right: 0px;
+    border-left: 2px solid #CC3300;
+
+}
+
+.add-gifts-container h3 {
+    margin-bottom: 35px;
+}
+
+.list-gifts-container {
+    width: 40%;
+    margin-top: 50px;
+    padding: 20px;
+    float: left;
+    margin-left: 0px;
+}
+
+.list-gifts-container h3 {
+    padding-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .container-home {
@@ -167,7 +201,7 @@ main {
 }
 
 .notice {
-    color: blue;
+    color: #00374F;
 }
 
 .half {
@@ -210,7 +244,7 @@ main {
 
 .create-home {
     width: 40%;
-    margin-top: -192px;
+    margin-top: -176px;
     margin-left: 566px;
     }
 
@@ -336,7 +370,7 @@ main {
 }
 
 .alerts {
-    margin-left: 200px;
+    margin-left: 80px;
 }
 
 .alert {
@@ -355,4 +389,19 @@ main {
 
 .reset-button {
     margin-left: 205px;
+}
+
+.greeting {
+    margin-bottom: 100px;
+    margin-left: 12px;
+}
+
+.greeting h3 {
+    color: #dd3b2a;
+    font-size: 30px;
+}
+
+.logout-link a {
+    color: #00374F;
+    margin-left: 850px;
 }
