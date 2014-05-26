@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517164347) do
+ActiveRecord::Schema.define(version: 20140526052120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "gifts", force: true do |t|
     t.string "nickname"
-    t.string "gift_url"
+    t.string "url"
   end
 
   create_table "users", force: true do |t|
