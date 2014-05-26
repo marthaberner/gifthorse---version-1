@@ -142,16 +142,18 @@ main {
 .page-container {
     background-color: #FAF3E6;
     height: 800px;
+    border-radius:55px;
 }
 
 .container {
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
-    width: 80%;
+    width: 90%;
     padding: 20px;
     border: 2px solid #CC3300;
     border-radius:25px;
+    -moz-border-radius: 15px;
 
 
 }
