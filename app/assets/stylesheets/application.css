@@ -71,7 +71,7 @@ h1:before {
 
 h1 span {
     /* to hide the lines from behind the text, you have to set the background color the same as the container */
-    background-color: #EDF6FF;
+    background-color: #FAF3E6;
     padding: 0 15px;
 }
 
@@ -134,24 +134,25 @@ p {
 }
 
 main {
-    background-color: #EDF6FF;
+
 
 
 }
 
 .page-container {
-    background-color: #EDF6FF;
+    background-color: #FAF3E6;
     height: 800px;
 }
 
 .container {
-    margin-top: 75px;
+    margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
     width: 80%;
-    padding: 0px;
-    border-top: 4px solid #CCE4FB;
-    border-bottom: 4px solid #CCE4FB;
+    padding: 20px;
+    border: 2px solid #CC3300;
+    border-radius:25px;
+
 
 }
 
@@ -169,10 +170,12 @@ main {
 
 .half {
     width: 90%;
+    margin-top: 10px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 20px;
-    border-top: 3px solid #CCE4FB;
+    padding: 20px;
+    border: 2px solid #CC3300;
+    border-radius:25px;
 }
 
 .create_account {
@@ -206,7 +209,7 @@ main {
 .create-home {
     width: 40%;
     margin-top: -192px;
-    margin-left: 580px;
+    margin-left: 566px;
     }
 
 .forgot-password {
