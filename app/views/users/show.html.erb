@@ -5,6 +5,20 @@
 
     <div class="list-gifts-container">
       <h3>Your GiftHorse List</h3>
+      <table width="500">
+        <thead>
+        <th>Nickname</th>
+        <th>Url</th>
+        </thead>
+        <tbody>
+        <% @gifts.each do |gift| %>
+        <tr>
+          <td><%= gift.nickname %></td>
+          <td><%= gift.url %></td>
+        </tr>
+          <% end %>
+        </tbody>
+      </table>
 
     </div>
 
@@ -34,7 +48,7 @@
           </p>
 
           <p>
-            <%= f.submit "Add Item", class: "form-button" %>
+            <%= f.submit "Add Item", class: "add-item-button" %>
           </p>
         <% end %>
 
