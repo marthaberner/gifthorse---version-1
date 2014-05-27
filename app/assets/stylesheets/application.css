@@ -52,7 +52,7 @@ h1 {
     font-size: 81px;
     font-weight: 800;
     color: #00374F;
-    padding-top: 50px;
+    padding-top: 90px;
     margin-top: 0px;
     position: relative;
     text-align: center;
@@ -64,7 +64,7 @@ h1:before {
     content:"";
     margin: 0 auto; /* this centers the line to the full width specified */
     position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-    top: 60px; left: 0; right: 0; bottom: 0;
+    top: 100px; left: 0; right: 0; bottom: 0;
     width: 90%;
     z-index: -1;
 }
@@ -280,7 +280,7 @@ main {
     display: block;
     width: 75%;
     padding-left: 75px;
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 30px;
 
 }
